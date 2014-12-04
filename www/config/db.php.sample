@@ -1,0 +1,7 @@
+<?php
+    $conf = array (
+        "user" => "tardis",
+        "host" => "somewhere.in.time.and.space.com",
+        "password" => "s0m3th1ng"
+    );
+?>
