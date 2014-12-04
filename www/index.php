@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset"utf-8"/>
-        <title>Hello World</title>
+        <title>Humaweb</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     </head>
     <body>
@@ -15,7 +15,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Bootstrap theme</a>
+                    <a class="navbar-brand" href="#">Humaweb</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
