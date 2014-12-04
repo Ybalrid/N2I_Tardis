@@ -2,7 +2,7 @@
 <div class="container" role="main">
     <div class="col-md-4"></div>
     <div class="col-md-4">
-        <form role="form">
+        <form role="form" method="post" action="login.php">
             <div class="form-group">
                 <label for="exampleInputEmail1">Login</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Login">
