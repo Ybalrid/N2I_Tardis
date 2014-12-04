@@ -1,4 +1,4 @@
-<?php require_once("header.php"); ?>
+<?php require_once("theme/header.php"); ?>
 <div class="container" role="main">
     <div class="col-md-4"></div>
     <div class="col-md-4">
