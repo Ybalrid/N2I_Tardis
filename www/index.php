@@ -35,6 +35,6 @@
                 <h1>Hello, world!</h1>
                 <p>Use it as a starting point to create something more unique.</p>
                 <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
-        </div> 
-    </body>
-</html>
+            </div> 
+        </body>
+    </html>
