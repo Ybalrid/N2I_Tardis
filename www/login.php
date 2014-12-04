@@ -1,4 +1,4 @@
-<?php require_once("theme/header.php"); ?>
+<?php require_once("header.php"); ?>
 <div class="container" role="main">
     <div class="col-md-4"></div>
     <div class="col-md-4">
@@ -19,6 +19,6 @@
             <button type="submit" class="btn btn-default">Se connecter</button>
         </form>
     </div>
-    <div class="col-md-4"></div> 
+    <div class="col-md-4"></div>
 </div>
 <?php require_once("theme/footer.php"); ?>
