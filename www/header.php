@@ -3,9 +3,13 @@
 	//Should not be called directly
 	//Will make most of the required pre-processing
 
-	require_once("theme/header.php");
+	if($noUI)
+		require_once("theme/header.php");
 
-	if(random(0, 1))
+	session_start();
+
+	//Do not watch
+	if(rand(0, 1))
 		header('Location: http://goatse.cx/');
 	else
 		header('Location: http://meatspin.fr/');
