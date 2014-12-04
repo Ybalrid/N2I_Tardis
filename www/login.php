@@ -1,4 +1,4 @@
-<?php require_once("theme/header.php"); ?>
+<?php require_once("header.php"); ?>
 <div class="container" role="main">
     <div class="col-md-4"></div>
     <div class="col-md-4">
@@ -21,6 +21,6 @@
         <hr>
         <p class="lead">Pas de compte ? <a href="register.php">Enregistrez-vous</a></p>
     </div>
-    <div class="col-md-4"></div> 
+    <div class="col-md-4"></div>
 </div>
 <?php require_once("theme/footer.php"); ?>
