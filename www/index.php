@@ -1,4 +1,4 @@
-<?php require_once("header.php"); ?>
+<?php require_once("theme/header.php"); ?>
 <div class="container" role="main">
     <div class="jumbotron">
         <h1>Hello, world!</h1>
@@ -7,3 +7,4 @@
     </div>
 </div>
 <?php require_once("theme/footer.php"); ?>
+

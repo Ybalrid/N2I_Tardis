@@ -42,6 +42,8 @@
             <input type="hidden" id="_loginToken" value="<?php echo $_SESSION['_loginToken'];?>">
             <button type="submit" class="btn btn-default">Se connecter</button>
         </form>
+        <hr>
+        <p class="lead">Pas de compte ? <a href="register.php">Enregistrez-vous</a></p>
     </div>
     <div class="col-md-4"></div>
 </div>
