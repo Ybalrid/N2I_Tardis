@@ -1,0 +1,8 @@
+<?php
+    $CONFIG = array (
+        "bd_user" => "tardis",
+        "bd_hostname" => "somewhere.in.time.and.space.com",
+        "bdd_dbname" => "lunaIsBestPony",
+        "bdd_password" => "s0m3th1ng"
+    );
+?>
