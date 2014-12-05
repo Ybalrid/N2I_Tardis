@@ -4,7 +4,7 @@
 
     require_once("header.php");
 
-    if(isset($_SESSION['_registerToken']) && $_SESSION['_registerToken'] != 0 && $_REQUEST['_registerToken'] === $_SESSION['_registerToken'])    //Login request
+    if(isset($_SESSION['_registerToken']) && $_SESSION['_registerToken'] != 0 && $_REQUEST['_registerToken'] == $_SESSION['_registerToken'])    //Login request
     {
         require_once('backend/DBInterface.php');
 

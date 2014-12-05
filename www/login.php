@@ -5,7 +5,7 @@
 
     require_once("header.php");
 
-    if(isset($_SESSION['_loginToken']) && $_SESSION['_loginToken'] != 0 && $_REQUEST['_loginToken'] === $_SESSION['_loginToken'])    //Login request
+    if(isset($_SESSION['_loginToken']) && $_SESSION['_loginToken'] != 0 && $_REQUEST['_loginToken'] == $_SESSION['_loginToken'])    //Login request
     {
         require_once('backend/DBInterface.php');
 
@@ -49,7 +49,7 @@
                     <input type="checkbox"> Se souvenir de moi
                 </label>
             </div>
-            <input type="hidden" id="_loginToken" value="<?php echo $_SESSION['_loginToken'];?>">
+            <input type="hidden" id="_loginToken" name="_loginToken" value="<?php echo $_SESSION['_loginToken'];?>">
             <button type="submit" class="btn btn-default">Se connecter</button>
         </form>
         <hr>
