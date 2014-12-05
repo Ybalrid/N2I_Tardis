@@ -12,12 +12,10 @@
 
         if(empty($_REQUEST['login']) || empty($_REQUEST['password']) || empty($_REQUEST['email']) || empty($_REQUEST['genre']) || empty($_REQUEST['ville']) || empty($_REQUEST['age']))
         {
-            echo "ISSUE 1";
             $loginError = true;
         }
         else if($bdd->isUserExist($_REQUEST['login']) || $bdd->isMailAlreadyTaken($_REQUEST['email']))
         {
-            echo "ISSUE 2";
             $loginError = true;
         }
         else
@@ -31,10 +29,6 @@
             header('Location: /');
             die('YOU KILLED ME BY REFUSING THIS HEADER!');
         }
-    }
-    else
-    {
-        echo "GOT AWAY LOL" . (isset($_REQUEST['_registerToken']) ? "1" : "0") . " - " . $_REQUEST['_registerToken'] . " - " . ($_REQUEST['_registerToken'] == $_SESSION['_registerToken'] ? "1" : "0");
     }
     require_once("theme/header.php");
     $_SESSION['_registerToken'] = rand(1, 0xffffffff);
