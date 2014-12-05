@@ -69,6 +69,17 @@ class DBInterface
 
         return $req->fetch();
     }
+
+    function getAssociation($id)
+    {
+        if(empty($id))
+            return false;
+
+        $req = $this->database->prepare('SELECT * FROM associations WHERE id = ?');
+        $req->execute(array($id));
+
+        return $req->fetch();
+    }
 }
 
 ?>
