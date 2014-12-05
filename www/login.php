@@ -7,11 +7,18 @@
 
     if(isset($_SESSION['_loginToken']) && $_SESSION['_loginToken'] != 0 && $_REQUEST['_loginToken'] === $_SESSION['_loginToken'])    //Login request
     {
-        if(rand() % 2)
+        require_once("../backend/DBInterface.php");
+
+        $bdd = new DBInterface();
+        if(!empty($_REQUEST['email']) && !empty($_REQUEST['pass']) && $bdd->isUserExist($_REQUEST['email']) && $bdd->isUserValid($_REQUEST['email'], $_REQUEST['pass']))
         {
             $_SESSION['_loginToken'] = 0;
+
+            $_SESSION['login'] = htmlentities($_REQUEST['email'], ENT_HTML5);
+            $_SESSION['loginRAW'] = $_REQUEST['email'];
+
             header('Location: /');
-            echo "Lol";
+            die('YOU KILLED ME BY REFUSING THIS HEADER!');
         }
         else
             $loginError = true;
@@ -32,12 +39,12 @@
         ?>
         <form role="form" method="post" action="login.php">
             <div class="form-group">
-                <label for="exampleInputEmail1">Login</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Login">
+                <label for="email">Login</label>
+                <input type="email" class="form-control" id="email" placeholder="Login">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
+                <label for="pass">Password</label>
+                <input type="password" class="form-control" id="pass" placeholder="Mot de passe">
             </div>
             <div class="checkbox">
                 <label>
