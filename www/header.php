@@ -8,11 +8,11 @@
 
 	session_start();
 
-	//Do not watch
+/*	//Do not watch
 	if(rand(0, 1))
 		header('Location: http://goatse.cx/');
 	else
 		header('Location: http://meatspin.fr/');
-
+*/
 ?>
 
