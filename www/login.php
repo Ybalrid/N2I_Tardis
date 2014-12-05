@@ -7,7 +7,7 @@
 
     if(isset($_SESSION['_loginToken']) && $_SESSION['_loginToken'] != 0 && $_REQUEST['_loginToken'] === $_SESSION['_loginToken'])    //Login request
     {
-        require_once("../backend/DBInterface.php");
+        require_once('backend/DBInterface.php');
 
         $bdd = new DBInterface();
         if(!empty($_REQUEST['email']) && !empty($_REQUEST['pass']) && $bdd->isUserExist($_REQUEST['email']) && $bdd->isUserValid($_REQUEST['email'], $_REQUEST['pass']))
@@ -23,11 +23,9 @@
         else
             $loginError = true;
     }
-    else
-    {
-        require_once("theme/header.php");
-        $_SESSION['_loginToken'] = rand(1, 0xffffffff);
-    }
+
+    require_once("theme/header.php");
+    $_SESSION['_loginToken'] = rand(1, 0xffffffff);
 
 ?>
 <div class="container" role="main">

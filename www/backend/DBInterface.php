@@ -37,7 +37,7 @@ class DBInterface
         return !($req->fetch() == NULL);
     }
 
-    function addUser($username = NULL, $password = NULL, $mail = NULL, $age = NULL, $sex = 0, $city = NULL)
+    function addUser($username = NULL, $password = NULL, $mail = NULL, $age = NULL, $genre = 0, $city = NULL)
     {
         $req = $this->database->prepare('INSERT INTO users(username, password, mail, genre, ville, age) VALUES(:username, :password, :mail, :genre, :ville, :age)');
         $req->execute(array(
