@@ -11,9 +11,15 @@
         $bdd = new DBInterface();
 
         if(empty($_REQUEST['login']) || empty($_REQUEST['password']) || empty($_REQUEST['email']) || empty($_REQUEST['genre']) || empty($_REQUEST['ville']) || empty($_REQUEST['age']))
+        {
+            echo "ISSUE 1";
             $loginError = true;
+        }
         else if($bdd->isUserExist($_REQUEST['login']) || $bdd->isMailAlreadyTaken($_REQUEST['email']))
+        {
+            echo "ISSUE 2";
             $loginError = true;
+        }
         else
         {
             $bdd->addUser($_REQUEST['login'], $_REQUEST['password'], $_REQUEST['email'], $_REQUEST['age'], $_REQUEST['genre'], $_REQUEST['ville']);
@@ -25,6 +31,10 @@
             header('Location: /');
             die('YOU KILLED ME BY REFUSING THIS HEADER!');
         }
+    }
+    else
+    {
+        echo "GOT AWAY LOL";
     }
     require_once("theme/header.php");
     $_SESSION['_registerToken'] = rand(1, 0xffffffff);
