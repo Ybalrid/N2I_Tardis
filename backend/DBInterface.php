@@ -80,6 +80,28 @@ class DBInterface
 
         return $req->fetch();
     }
+
+    function getProject($id)
+    {
+        if(empty($id))
+            return false;
+
+        $req = $this->database->prepare('SELECT * FROM projects WHERE id = ?');
+        $req->execute(array($id));
+
+        return $req->fetch();
+    }
+
+    function getProjects($idAssoc)
+    {
+        if(empty($idAssoc))
+            return false;
+
+        $req = $this->database->prepare('SELECT * FROM projects WHERE id_owner = ?');
+        $req->execute(array($idAssoc));
+
+        return $req->fetchAll();
+    }
 }
 
 ?>
