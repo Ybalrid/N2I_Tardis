@@ -34,7 +34,7 @@
     }
     else
     {
-        echo "GOT AWAY LOL" . isset($_SESSION['_registerToken']) ? "1" : "0"  . " - " . $_SESSION['_registerToken'] !== 0 ? "1" : "0" . " - " . $_REQUEST['_registerToken'] === $_SESSION['_registerToken'] ? "1" : "0" ;
+        echo "GOT AWAY LOL" . (isset($_SESSION['_registerToken']) ? "1" : "0")  . " - " . ($_SESSION['_registerToken'] !== 0 ? "1" : "0") . " - " . ($_REQUEST['_registerToken'] === $_SESSION['_registerToken'] ? "1" : "0");
     }
     require_once("theme/header.php");
     $_SESSION['_registerToken'] = rand(1, 0xffffffff);
