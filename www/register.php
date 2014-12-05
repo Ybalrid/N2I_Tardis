@@ -6,7 +6,7 @@
         <form role="form" method="post" action="login.php">
             <div class="form-group">
                 <label for="login">Login</label>
-                <input type="email" class="form-control" id="login" placeholder="Login">
+                <input type="login" class="form-control" id="login" placeholder="Login">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
