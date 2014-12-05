@@ -11,14 +11,12 @@
         $bdd = new DBInterface();
 
         if(empty($_REQUEST['login']) || empty($_REQUEST['password']) || empty($_REQUEST['email']) || empty($_REQUEST['genre']) || empty($_REQUEST['ville']) || empty($_REQUEST['age']))
-        {
             $loginError = true;
-        }
         else if($bdd->isUserExist($_REQUEST['login']) || $bdd->isMailAlreadyTaken($_REQUEST['email']))
             $loginError = true;
         else
         {
-            $bdd->addUser($_REQUEST['login'], $_REQUEST['password'], $_REQUEST['email'], $_REQUEST['age'], $_REQUEST['genre'], $_REQUEST['ville'])
+            $bdd->addUser($_REQUEST['login'], $_REQUEST['password'], $_REQUEST['email'], $_REQUEST['age'], $_REQUEST['genre'], $_REQUEST['ville']);
 
             $_SESSION['_registerToken'] = 0;
             $_SESSION['login'] = htmlentities($_REQUEST['login'], ENT_HTML5);
@@ -27,8 +25,6 @@
             header('Location: /');
             die('YOU KILLED ME BY REFUSING THIS HEADER!');
         }
-        else
-            $loginError = true;
     }
     require_once("theme/header.php");
     $_SESSION['_registerToken'] = rand(1, 0xffffffff);
