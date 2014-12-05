@@ -5,28 +5,28 @@
     <div class="col-md-4">
         <form role="form" method="post" action="login.php">
             <div class="form-group">
-                <label for="exampleInputEmail1">Login</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Login">
+                <label for="login">Login</label>
+                <input type="email" class="form-control" id="login" placeholder="Login">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Mot de passe">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Mail</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mail">
+                <label for="mail">Mail</label>
+                <input type="email" class="form-control" id="mail" placeholder="Mail">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Sexe</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Sexe">
+                <label for="sexe">Sexe</label>
+                <input type="text" class="form-control" id="sexe" placeholder="Sexe">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Ville</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ville">
+                <label for="ville">Ville</label>
+                <input type="text" class="form-control" id="ville" placeholder="Ville">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Age</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Age">
+                <label for="age">Age</label>
+                <input type="text" class="form-control" id="age" placeholder="Age">
             </div>
             <button type="submit" class="btn btn-default">S'enregistrer</button>
         </form>
