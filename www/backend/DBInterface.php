@@ -1,6 +1,6 @@
 <?php
 
-include_once 'config.php';
+include_once '../config/db.php';
 
 class DBInterface
 {
@@ -68,6 +68,39 @@ class DBInterface
         $req->execute(array($username));
 
         return $req->fetch();
+    }
+
+    function getAssociation($id)
+    {
+        if(empty($id))
+            return false;
+
+        $req = $this->database->prepare('SELECT * FROM associations WHERE id = ?');
+        $req->execute(array($id));
+
+        return $req->fetch();
+    }
+
+    function getProject($id)
+    {
+        if(empty($id))
+            return false;
+
+        $req = $this->database->prepare('SELECT * FROM projects WHERE id = ?');
+        $req->execute(array($id));
+
+        return $req->fetch();
+    }
+
+    function getProjects($idAssoc)
+    {
+        if(empty($idAssoc))
+            return false;
+
+        $req = $this->database->prepare('SELECT * FROM projects WHERE id_owner = ?');
+        $req->execute(array($idAssoc));
+
+        return $req->fetchAll();
     }
 }
 
