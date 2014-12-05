@@ -1,7 +1,7 @@
 <?php require_once("theme/header.php"); ?>
 <div class="container" role="main">
-        <h1>Hello, world!</h1>
-        <p>Use it as a starting point to create something more unique.</p>
+        <h1>Humaweb</h1>
+        <p>La plateforme de collaboration en ligne pour vos projets humanitaires</p>
         <hr>
 </div>
 <div class="container" role="main">
