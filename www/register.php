@@ -34,7 +34,7 @@
     }
     else
     {
-        echo "GOT AWAY LOL" . (isset($_REQUEST['_registerToken']) ? "1" : "0")  . " - " . $_REQUEST['_registerToken']  . " - " . $_SESSION['_registerToken'];
+        echo "GOT AWAY LOL" . (isset($_REQUEST['_registerToken']) ? "1" : "0")  . " - "  . $_REQUEST['_registerToken']  . " - " . $_SESSION['_registerToken'];
     }
     require_once("theme/header.php");
     $_SESSION['_registerToken'] = rand(1, 0xffffffff);
@@ -68,7 +68,7 @@
                 <label for="age">Age</label>
                 <input type="text" class="form-control" id="age" placeholder="Age">
             </div>
-            <input type="hidden" id="_registerToken" value="<?php echo $_SESSION['_registerToken'];?>">
+            <input type="hidden" id="_registerToken" name="_registerToken" value="<?php echo $_SESSION['_registerToken'];?>">
             <button type="submit" class="btn btn-default">S'enregistrer</button>
         </form>
     </div>
