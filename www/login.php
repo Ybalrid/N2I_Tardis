@@ -1,7 +1,7 @@
 <?php
 
     $noUI = true;
-    $loginError = flase;
+    $loginError = false;
 
     require_once("header.php");
 
@@ -11,6 +11,7 @@
         {
             $_SESSION['_loginToken'] = 0;
             header('Location: /');
+            echo "Lol";
         }
         else
             $loginError = true;
@@ -25,6 +26,10 @@
 <div class="container" role="main">
     <div class="col-md-4"></div>
     <div class="col-md-4">
+        <?php
+            if($loginError)
+                echo "<div class=\"alert alert-danger\" role=\"alert\"><strong>Erreur !</strong> Mauvais login ou mauvais mot de passe !</div>";
+        ?>
         <form role="form" method="post" action="login.php">
             <div class="form-group">
                 <label for="exampleInputEmail1">Login</label>
@@ -47,4 +52,5 @@
     </div>
     <div class="col-md-4"></div>
 </div>
+<
 <?php require_once("theme/footer.php"); ?>
